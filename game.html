@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Healthcare Quiz</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<div class="card-row">
+    <div class="card" data-correct="B">
+        <div class="card__inner">
+            <div class="card__face card__face--front">
+                <h2>Question 1</h2>
+                <p>What is the most important thing to do before assisting a client with personal care?</p>
+            </div>
+            <div class="card__face card__face--back">
+                <div class="card__face card__face--back">
+                    <p>Question: What is the most important thing to do before assisting a client with personal care?</p>
+                    <div class="answers">
+                        <button onclick="checkAnswer(this, 'A')">A) Ask if they need help</button>
+                        <button onclick="checkAnswer(this, 'B')">B) Put on gloves and wash hands</button>
+                        <button onclick="checkAnswer(this, 'C')">C) Check your phone for messages</button>
+                        <button onclick="checkAnswer(this, 'D')">D) Take a break</button>
+                    </div>
+                    <p id="feedback-1"></p>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card" data-correct="C">
+        <div class="card__inner">
+            <div class="card__face card__face--front">
+                <h2>Question 2</h2>
+                <p>What should you do before providing medication to a patient?</p>
+            </div>
+            <div class="card__face card__face--back">
+                <p>Choose the correct answer:</p>
+                <div class="answers">
+                    <button>A) Verify the patient’s identity</button>
+                    <button>B) Read the prescription carefully</button>
+                    <button>C) Both A and B</button>
+                    <button>D) Skip this step</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-correct="B">
+        <div class="card__inner">
+            <div class="card__face card__face--front">
+                <h2>Question 3</h2>
+                <p>How often should hands be washed during patient care?</p>
+            </div>
+            <div class="card__face card__face--back">
+                <p>Choose the correct answer:</p>
+                <div class="answers">
+                    <button>A) Only when visibly dirty</button>
+                    <button>B) At the start and end of care</button>
+                    <button>C) After each interaction</button>
+                    <button>D) Every 5 minutes</button>
+                    <p class="feed back"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="score-container">
+    <h2>Score:</h2>
+    <span id="score">0</span>/100
+
+</div>
+
+<div class="back-to-home">
+    <button onclick="location.href='index.html'">← Back to Main Page</button>
+</div>
+<script src="main.js"></script>
+
+</body>
+
+</html>

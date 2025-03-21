@@ -5,32 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Healthcare Quiz</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-    <div class="card">
-        <div class="card__inner">
-            <div class="card__face card__face--front">
-                <h2>Home Healthcare Learning</h2>
+        <main>
+            <section class="description">
+                <p>Put your caregiving skills to the test and learn valuable tips for compassionate client care. 🌟 Ready to get started?</p>
+            </section>
+    
+            <div class="homepage-container">
+                <!-- Sample Card Section -->
+                <section class="sample-card">
+                    <div class="card">
+                        <div class="card__inner">
+                            <div class="card__face card__face--front">
+                                <div class="card__content">
+                                    <img src="/pink-pic.jpg" alt="Picture" class="pp" />
+                                    <h2>By: Shelia LaTrese</h2>
+                                </div>
+                                <div class="card__body">
+                                    <h3>Home Healthcare Card Game</h3>
+                                    <p>Test your home healthcare skills with this interactive flashcard game designed for patient care aides!</p>
+                                </div>
+                            </div>
+                            <div class="card__face card__face--back">
+                                <h2>Home Healthcare Interactive Learning Quiz</h2>
+                                <p>Improve patient care and master essential caregiving techniques!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- Login/Sign-Up Section -->
+                <section class="auth-container">
+                    <h2>Login or Sign Up</h2>
+                    <form id="authForm">
+                        <label for="authName">Name:</label>
+                        <input type="text" id="authName" name="authName" placeholder="Enter your name" required>
+                        
+                        <label for="authEmail">Email:</label>
+                        <input type="email" id="authEmail" name="authEmail" placeholder="Enter your email" required>
+                        
+                        <label for="authPassword">Password:</label>
+                        <input type="password" id="authPassword" name="authPassword" placeholder="Enter your password" required>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
             </div>
-            <div class="card__face card__face--back">
-                <div class="card__content">
-                    <div class="card__header"></div>
-                    <img src="/pink-pic.jpg" alt="My picture" class ="pp" />
-                    <h2>Shelia LaTrese</h2>
-                </div>
-                <div class="card__body">
-                <h3>Home Healthcare Card Game</h3>
-                <p>Test your home healthcare skills with this interactive flashcard game designed for patient care
-                    aides! 🌟 Flip the cards to reveal key caregiving tips, essential procedures, and must-know safety guidelines—all in a fun and engaging way. 🚀 Keep practicing, track your progress, and master the fundamentals of compassionate client care!</p>
+            <div class="start-btn-container">
+                <button class="start-btn" onclick="location.href='game.html'">Start Game</button>
             </div>
-        </div>
-    </div>
-    </div>
+            
+        </main>
+    </body>
+    
+</body>
+<script src="main.js"></script>
+<script src="auth.js"></script>
+</body>
 
-
-    <script src="main.js"></script>
+   
 </body>
 
 </html>

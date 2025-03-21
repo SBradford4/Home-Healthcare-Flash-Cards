@@ -1,0 +1,257 @@
+
+.description p {
+    font-size: 1.5em; /* Make the text larger */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Keep the text color dark for readability */
+    text-align: center; /* Center the text (optional) */
+    margin-bottom: 20px; /* Add space below the description */
+}
+/* Homepage Container Styling */
+.homepage-container {
+    display: flex; /* Enable flexbox for layout */
+    flex-direction: row; /* Align items horizontally (side by side) */
+    justify-content: space-between; /* Space evenly between elements */
+    align-items: flex-start; /* Align items to the top */
+    gap: 30px; /* Add spacing between the card and login form */
+    margin: 20px auto; /* Add margin at the top and center the container horizontally */
+    max-width: 1200px; /* Limit the overall width of the container */
+    padding: 0 20px; /* Add padding for layout consistency */
+    box-sizing: border-box; /* Include padding in the element's width */
+}
+
+/* General Flip Card Styling */
+.card {
+    perspective: 1000px; /* Perspective for 3D effect */
+    width: 300px;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card__inner {
+    transform: rotateY(180deg); /* Trigger flip on hover */
+}
+
+.card__face {
+    position: absolute;
+    backface-visibility: hidden; /* Hides the back when flipping */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.card__face--front {
+    background: #f7d6e0; /* Light pink */
+    color: #333;
+    padding: 40px 10px; /* Adds space around the content (20px top/bottom, 10px left/right) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust Image Placement */
+.pp {
+    max-width: 80%; /* Constrain image width */
+    max-height: 150px; /* Constrain image height */
+    object-fit: cover; /* Ensure proper scaling */
+    margin: 25px 0; /* Adds space above and below the image */
+}
+
+
+.card__face--back {
+    background: salmon;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+/* Body Content Styling */
+.card__content, .card__body {
+    text-align: center;
+}
+
+.card__content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card__body h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.card__body p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Sample Card Styling */
+.sample-card {
+    flex: 1; /* Make the card flexible to take up equal space */
+    max-width: 45%; /* Limit the width for balance */
+    background-color: #ffffff; /* Light background */
+    padding: 20px; /* Add padding inside the card */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better aesthetics */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+/* Login/Sign-Up Container Styling */
+.auth-container {
+    flex: 1; /* Make the login form flexible to take up equal space */
+    max-width: 45%; /* Limit the width for balance */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better aesthetics */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+/* Form Element Styling */
+form {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    gap: 15px; /* Add spacing between fields */
+}
+
+/* Label and Input Alignment */
+label {
+    font-size: 1em;
+    margin-bottom: 5px; /* Small spacing below labels */
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+button {
+    background-color: #fa8072;
+    color: white;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Sign-Up Option */
+.signup-option {
+    text-align: center;
+    margin-top: 20px; /* Space above sign-up option */
+    font-size: 0.9em;
+}
+.signup-option a {
+    color: #007BFF; /* Highlight sign-up link */
+    text-decoration: none;
+}
+.signup-option a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust sample-card */
+* Sample Card Styling */
+.sample-card {
+    flex: 1; /* Ensures card takes equal space */
+    max-width: 45%; /* Restrict max width for responsiveness */
+    background: #ffffff; /* Optional: Add background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Start Button Styling */
+.start-btn {
+    display: block; /* Block element for better control */
+    width: 200px; /* Set a fixed rectangular width */
+    height: 50px; /* Set a fixed height */
+    background-color: dark salmon;
+    color: white; /* White text for contrast */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Optional: Slightly rounded corners */
+    margin: 20px auto 0; /* Center horizontally and add top margin */
+    text-align: center; /* Align text centrally */
+    line-height: 50px; /* Center text vertically */
+    font-size: 1.2em; /* Adjust font size for readability */
+    cursor: pointer; /* Add pointer effect */
+    transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+    background-color: salmon;
+}
+
+/* Ensures Button Stays at the Bottom of the Page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body covers the full height of the viewport */
+    margin: 0; /* Removes default body margin */
+}
+
+main {
+    flex: 1; /* Pushes the button to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-start; /* Ensures content is spaced properly */
+}
+/* Start Button Styling */
+.start-btn {
+    display: block;
+    width: 200px; /* Keeps the rectangular shape */
+    height: 50px;
+    background-color: #4caf50; /* Green background */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px; /* Centers text vertically */
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute; /* Positions the button absolutely */
+    bottom: 20px; /* Places it near the bottom */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Corrects centering offset */
+}
+
+.start-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+@media (max-width: 768px) {
+    .homepage-container {
+        flex-direction: column; /* Stack card and login vertically */
+        align-items: center;
+    }
+
+    .sample-card, .login-container {
+        width: 100%;
+        max-width: 500px; /* Restricts width for readability */
+    }
+}
